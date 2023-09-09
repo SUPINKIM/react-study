@@ -1,9 +1,9 @@
-import SelectBox from './components/select-box';
+import FloatingButton from './components/floating/floating-button';
 
 function App() {
     return (
         <>
-            <SelectBox />
+            <FloatingButton />
         </>
     );
 }

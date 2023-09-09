@@ -62,7 +62,7 @@ module.exports = {
             {
                 ObjectExpression: {
                     multiline: true,
-                    minProperties: 1
+                    minProperties: 2
                 },
                 ObjectPattern: {
                     multiline: true,
@@ -79,13 +79,7 @@ module.exports = {
             }
         ],
         'object-property-newline': 'error',
-        'no-extra-parens': [
-            'error',
-            'all',
-            {
-                returnAssign: false
-            }
-        ]
+        multiline: 'off'
     },
     settings: {
         'import/resolver': {
