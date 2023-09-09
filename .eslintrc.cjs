@@ -1,0 +1,95 @@
+module.exports = {
+    root: true,
+    env: { browser: true, es2020: true },
+    extends: [
+        'eslint:recommended',
+        'plugin:@typescript-eslint/recommended',
+        'plugin:react-hooks/recommended',
+        'prettier'
+    ],
+    ignorePatterns: ['dist', '.eslintrc.cjs'],
+    parser: '@typescript-eslint/parser',
+    plugins: ['react-refresh', 'import', '@emotion'],
+    rules: {
+        'react-refresh/only-export-components': [
+            'warn',
+            { allowConstantExport: true }
+        ],
+        'import/no-unresolved': 'error',
+        'import/order': [
+            'error',
+            {
+                groups: [
+                    'builtin',
+                    'external',
+                    'internal',
+                    'type',
+                    'parent',
+                    'sibling',
+                    'index',
+                    'unknown'
+                ],
+                pathGroups: [
+                    {
+                        pattern: 'react*',
+                        group: 'external',
+                        position: 'before'
+                    }
+                ],
+                pathGroupsExcludedImportTypes: ['react']
+            }
+        ],
+        indent: ['error', 4],
+        quotes: ['error', 'single'],
+        'max-depth': ['error', 4],
+        'no-multiple-empty-lines': [
+            'error',
+            {
+                max: 2,
+                maxEOF: 0
+            }
+        ],
+        'object-curly-spacing': [
+            'error',
+            'always',
+            {
+                arraysInObjects: false,
+                objectsInObjects: true
+            }
+        ],
+        'object-curly-newline': [
+            'error',
+            {
+                ObjectExpression: {
+                    multiline: true,
+                    minProperties: 1
+                },
+                ObjectPattern: {
+                    multiline: true,
+                    minProperties: 3
+                },
+                ImportDeclaration: {
+                    multiline: true,
+                    minProperties: 5
+                },
+                ExportDeclaration: {
+                    multiline: true,
+                    minProperties: 3
+                }
+            }
+        ],
+        'object-property-newline': 'error',
+        'no-extra-parens': [
+            'error',
+            'all',
+            {
+                returnAssign: false
+            }
+        ]
+    },
+    settings: {
+        'import/resolver': {
+            typescript: {}
+        }
+    }
+};
