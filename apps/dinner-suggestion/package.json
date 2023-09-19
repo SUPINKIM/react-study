@@ -1,0 +1,6 @@
+{
+    "dependencies": {
+        "tsconfig": "*",
+        "eslint-config-custom": "*"
+    }
+}
