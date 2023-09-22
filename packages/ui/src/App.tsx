@@ -1,9 +1,9 @@
-import FloatingButton from './components/floating/floating-button';
+import FloatingButtonSet from '@components/floating/index';
 
 function App() {
     return (
         <>
-            <FloatingButton />
+            <FloatingButtonSet />
         </>
     );
 }

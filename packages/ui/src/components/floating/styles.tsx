@@ -11,16 +11,6 @@ const slideUp = keyframes`
   }
 `;
 
-const SelectOptionItem = styled.div`
-    width: 100%;
-    color: #ffffff;
-    cursor: pointer;
-    background-color: #3f3f3f;
-    :hover {
-        opacity: 0.5;
-    }
-`;
-
 const FloatingOptionItem = styled.div`
     width: 40px;
     height: 40px;
@@ -57,8 +47,4 @@ const FloatingDefaultButton = styled.div`
     }
 `;
 
-export {
-    SelectOptionItem, //
-    FloatingOptionItem,
-    FloatingDefaultButton
-};
+export { FloatingOptionItem, FloatingDefaultButton };

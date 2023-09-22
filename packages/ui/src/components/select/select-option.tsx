@@ -1,21 +1,15 @@
-import { TPropsWithChildren } from '../../types';
-import { FloatingOptionItem, SelectOptionItem } from './style-button';
+import { SelectOptionItem } from '@components/select/styles';
+import { TPropsWithChildren } from '@/types';
 
 interface ISelectOptionProps {
-    type: 'floating' | 'select';
     onClick: () => void;
 }
 
 const SelectOption: TPropsWithChildren<ISelectOptionProps> = ({
-    type,
     onClick,
     children
 }) => {
-    return type === 'floating' ? (
-        <FloatingOptionItem onClick={() => onClick()}>
-            {children}
-        </FloatingOptionItem>
-    ) : (
+    return (
         <SelectOptionItem onClick={() => onClick()}>
             {children}
         </SelectOptionItem>

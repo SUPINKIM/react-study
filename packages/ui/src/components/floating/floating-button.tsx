@@ -1,48 +1,19 @@
-import { FC, useState } from 'react';
-import { css } from '@emotion/react';
-import SelectOption from '../select/select-option';
-import { FloatingDefaultButton } from '../select/style-button';
+import { FloatingOptionItem } from '@components/floating/styles';
+import { TPropsWithChildren } from '@/types';
 
-const FloatingButton: FC = () => {
-    const [isShow, setShow] = useState(false);
+interface ISelectOptionProps {
+    onClick: () => void;
+}
 
-    const clickSelectOption = () => {
-        alert('click!');
-    };
-
+const SelectOption: TPropsWithChildren<ISelectOptionProps> = ({
+    onClick,
+    children
+}) => {
     return (
-        <div
-            css={css`
-                position: fixed;
-                bottom: 20px;
-                right: 100px;
-            `}>
-            {isShow ? (
-                <div
-                    css={css`
-                        display: flex;
-                        flex-direction: column;
-                        row-gap: 12px;
-                    `}>
-                    <SelectOption
-                        type='floating'
-                        onClick={() => clickSelectOption()}>
-                        📄
-                    </SelectOption>
-                    <SelectOption
-                        type='floating'
-                        onClick={() => setShow(false)}>
-                        ❎
-                    </SelectOption>
-                </div>
-            ) : (
-                false
-            )}
-            <FloatingDefaultButton onClick={() => setShow(!isShow)}>
-                ✏️
-            </FloatingDefaultButton>
-        </div>
+        <FloatingOptionItem onClick={() => onClick()}>
+            {children}
+        </FloatingOptionItem>
     );
 };
 
-export default FloatingButton;
+export default SelectOption;

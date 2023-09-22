@@ -1,5 +1,5 @@
 module.exports = {
-    // root: true,
+    root: true,
     env: { browser: true, es2020: true },
     extends: [
         'eslint:recommended',
@@ -56,7 +56,7 @@ module.exports = {
             'error',
             'always',
             {
-                arraysInObjects: false,
+                arraysInObjects: true,
                 objectsInObjects: true
             }
         ],

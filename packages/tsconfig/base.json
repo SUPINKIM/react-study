@@ -19,6 +19,5 @@
         "noFallthroughCasesInSwitch": true,
 
         "jsxImportSource": "@emotion/react"
-    },
-    "references": [{ "path": "./tsconfig.node.json" }]
+    }
 }

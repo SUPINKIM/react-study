@@ -1,0 +1,27 @@
+{
+    "folders": [
+        {
+            "name": "🌈 my-blog",
+            "path": "."
+        },
+        {
+            "name": "🚀 @my-blog/dinner-suggestion",
+            "path": "apps/dinner-suggestion"
+        },
+        {
+            "name": "📦 @my-blog/ui",
+            "path": "packages/ui"
+        },
+        {
+            "name": "📦 @my-blog/eslint-config-custom",
+            "path": "packages/eslint-config-custom"
+        },
+        {
+            "name": "📦 @my-blog/tsconfig",
+            "path": "packages/tsconfig"
+        }
+    ],
+    "settings": {
+        "typescript.tsdk": "node_modules/typescript/lib"
+    }
+}

@@ -7,6 +7,10 @@
     "repository": "git@private-github.com:SUPINKIM/react-study.git",
     "author": "SUPINKIM <qorgkr26@sookmyung.ac.kr>",
     "license": "MIT",
+    "scripts": {
+        "dev": "turbo run dev",
+        "build": "turbo run build"
+    },
     "workspaces": [
         "apps/*",
         "packages/*"
