@@ -1,7 +1,7 @@
 import { FC, useState } from 'react';
 import { css } from '@emotion/react';
 import { FloatingDefaultButton } from '@components/floating/styles';
-import SelectOption from '../select/select-option';
+import FloatingButton from './floating-button';
 
 const FloatingButtonSet: FC = () => {
     const [isShow, setShow] = useState(false);
@@ -24,12 +24,12 @@ const FloatingButtonSet: FC = () => {
                         flex-direction: column;
                         row-gap: 12px;
                     `}>
-                    <SelectOption onClick={() => clickSelectOption()}>
+                    <FloatingButton onClick={() => clickSelectOption()}>
                         📄
-                    </SelectOption>
-                    <SelectOption onClick={() => setShow(false)}>
+                    </FloatingButton>
+                    <FloatingButton onClick={() => setShow(false)}>
                         ❎
-                    </SelectOption>
+                    </FloatingButton>
                 </div>
             ) : (
                 false

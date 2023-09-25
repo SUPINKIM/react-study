@@ -1,4 +1,4 @@
-import FloatingButtonSet from '@components/floating/index';
+import FloatingButtonSet from '@components/floating';
 
 function App() {
     return (

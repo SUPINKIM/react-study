@@ -1,3 +1,7 @@
-// interface ICardProps { }
+import { TPropsWithChildren } from '@/types';
 
-// const Card: TPropsWithChildren = () => { };
+const Card: TPropsWithChildren = () => {
+    return <div></div>;
+};
+
+export default Card;

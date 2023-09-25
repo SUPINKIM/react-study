@@ -1,12 +1,21 @@
 {
     "extends": "tsconfig/base.json",
-    "include": ["src"],
-    "exclude": ["node_modules"],
+    // "files": ["./src/main.tsx"],
     "compilerOptions": {
-        "baseUrl": "./",
+        "baseUrl": ".",
         "paths": {
             "@/*": ["src/*"],
             "@components/*": ["src/components/*"]
-        }
-    }
+        },
+        "esModuleInterop": true,
+        "jsx": "preserve",
+        "emitDeclarationOnly": true,
+        "declaration": true,
+        "noEmit": false,
+        "outDir": "./@types"
+        // "allowImportingTsExtensions": false,
+        // "isolatedModules": true,
+    },
+    "include": ["src/**/*.tsx", "src/**/*.ts"],
+    "exclude": ["node_modules", "./dist"]
 }

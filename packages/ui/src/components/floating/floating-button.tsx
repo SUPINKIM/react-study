@@ -5,7 +5,7 @@ interface ISelectOptionProps {
     onClick: () => void;
 }
 
-const SelectOption: TPropsWithChildren<ISelectOptionProps> = ({
+const FloatingButton: TPropsWithChildren<ISelectOptionProps> = ({
     onClick,
     children
 }) => {
@@ -16,4 +16,4 @@ const SelectOption: TPropsWithChildren<ISelectOptionProps> = ({
     );
 };
 
-export default SelectOption;
+export default FloatingButton;

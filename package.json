@@ -9,7 +9,8 @@
     "license": "MIT",
     "scripts": {
         "dev": "turbo run dev",
-        "build": "turbo run build"
+        "build": "turbo run build",
+        "type-checking": "turbo run type-checking"
     },
     "workspaces": [
         "apps/*",
