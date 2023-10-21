@@ -1,7 +1,7 @@
 import { TPropsWithChildren } from '@/types';
 
 const Card: TPropsWithChildren = () => {
-    return <div></div>;
+    return <div>card</div>;
 };
 
 export default Card;

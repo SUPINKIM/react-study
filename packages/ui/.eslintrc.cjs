@@ -1,3 +1,8 @@
 module.exports = {
-    extends: ['custom']
+    extends: ['custom'],
+    settings: {
+        'import/resolver': {
+            typescript: {}
+        }
+    }
 };

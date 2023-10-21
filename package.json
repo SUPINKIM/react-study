@@ -10,7 +10,11 @@
     "scripts": {
         "dev": "turbo run dev",
         "build": "turbo run build",
-        "type-checking": "turbo run type-checking"
+        "type-checking": "turbo run type-checking",
+        "ui:dev": "turbo run dev --filter=ui",
+        "ui:build": "turbo run build --filter=ui",
+        "dinner:dev": "turbo run dev --filter=dinner-suggestion",
+        "dinner:build": "turbo run build --filter=dinner-suggestion"
     },
     "workspaces": [
         "apps/*",

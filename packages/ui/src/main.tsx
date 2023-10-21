@@ -1,3 +1,4 @@
 import FloatingButtonSet from './components/floating';
+import Card from './components/card';
 
-export default FloatingButtonSet;
+export { FloatingButtonSet, Card };
