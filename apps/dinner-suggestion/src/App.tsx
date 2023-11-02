@@ -1,14 +1,22 @@
-import { FloatingButtonSet } from 'ui';
-import { Card } from 'ui';
+import { Button } from 'ui';
+import { css } from '@emotion/react';
 
 function App() {
     return (
-        <>
-            <div></div>
-            <h1>Vite + React2222</h1>
-            <FloatingButtonSet />
-            <Card />
-        </>
+        <div>
+            <div>오늘 저녁은 뭐 먹을까?</div>
+            <Button type='primary'>
+                <div
+                    css={css`
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        line-height: 12px;
+                    `}>
+                    Start!
+                </div>
+            </Button>
+        </div>
     );
 }
 
