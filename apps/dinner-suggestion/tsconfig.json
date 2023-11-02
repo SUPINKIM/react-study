@@ -4,7 +4,10 @@
         "baseUrl": ".",
         "paths": {
             "@/*": ["src/*"]
-        }
-    }
-    //  "include": ["src/**/*.tsx", "src/**/*.ts"]
+        },
+        "moduleResolution": "Node",
+        "esModuleInterop": true
+    },
+    "include": ["src/**/*.tsx", "src/**/*.ts"],
+    "exclude": ["node_modules", "./dist"]
 }
