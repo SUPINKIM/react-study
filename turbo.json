@@ -1,5 +1,6 @@
 {
     "$schema": "https://turbo.build/schema.json",
+    "globalDependencies": [".eslint.cjs", "yarn.lock"],
     "pipeline": {
         "build": {
             "dependsOn": ["^type-checking", "^build"],
@@ -11,6 +12,9 @@
         "test": {
             "dependsOn": ["build"],
             "inputs": ["src/**/*.tsx", "src/**/*.ts", "test/**/*.ts", "test/**/*.tsx"]
+        },
+        "storybook": {
+            "dependsOn": ["build"]
         },
         "type-checking": {},
         "lint": {},

@@ -10,7 +10,8 @@
     "scripts": {
         "dev": "turbo run dev",
         "build": "turbo run build",
-        "type-checking": "turbo run type-checking"
+        "type-checking": "turbo run type-checking",
+        "ui:storybook": "turbo run --filter=ui storybook"
     },
     "workspaces": [
         "apps/*",

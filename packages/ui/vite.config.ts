@@ -28,6 +28,5 @@ export default defineConfig({
             ]
         },
         target: 'esnext'
-        // ollupOptions: { external: ['@emotions/styled'] }
     }
 });
