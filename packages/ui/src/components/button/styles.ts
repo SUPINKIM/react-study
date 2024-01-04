@@ -3,20 +3,29 @@ import { ColorPalette, ColorPaletteMapper } from '../color';
 import { ButtonShape, ButtonSize, ButtonVariant, IButtonProps } from './types';
 
 const ButtonSizeMapper: Record<ButtonSize, Array<Interpolation<Theme>>> = {
-    [ButtonSize.SMALL]: [{ width: '20px' }, { height: '16px' }],
-    [ButtonSize.MEDIUM]: [{ width: '32px' }, { height: '28px' }],
-    [ButtonSize.LARGE]: [{ width: '48px' }, { height: '40px' }]
+    [ButtonSize.SMALL]: [
+        { padding: '8px 6px' },
+        { height: '24px' },
+        { width: '56px' }
+    ],
+    [ButtonSize.MEDIUM]: [
+        { padding: '10px 12px' },
+        { height: '32px' },
+        { width: '80px' }
+    ],
+    [ButtonSize.LARGE]: [
+        { padding: '16px 12px' },
+        { height: '36px' },
+        { width: '160px' }
+    ]
 };
 
 const ButtonShapeMapper: Record<ButtonShape, Array<Interpolation<Theme>>> = {
-    [ButtonShape.RECTANGLE]: [
-        { 'border-width': '1px' },
-        { 'border-style': 'solid' }
-    ],
+    [ButtonShape.RECTANGLE]: [{ borderWidth: '1px' }, { borderStyle: 'solid' }],
     [ButtonShape.ROUND]: [
-        { 'border-width': '1px' },
-        { 'border-style': 'solid' },
-        { 'border-radius': '6px' }
+        { borderWidth: '1px' },
+        { borderStyle: 'solid' },
+        { borderRadius: '6px' }
     ]
 };
 
@@ -42,21 +51,25 @@ export const createButtonStyles = ({
     shape,
     color
 }: IButtonProps) => {
-    const defaultStyle: Array<Interpolation<Theme>> = [{ all: 'unset' }];
+    const defaultStyle: Array<Interpolation<Theme>> = [
+        { all: 'unset' },
+        { cursor: 'pointer' },
+        { display: 'flex' },
+        { justifyContent: 'center' },
+        { alignItems: 'center' }
+    ];
 
     defaultStyle.push(...ButtonSizeMapper[size]);
     defaultStyle.push(...ButtonVariantMapper[variant]);
 
     if (variant !== ButtonVariant.TEXT) {
         defaultStyle.push(...ButtonShapeMapper[shape]);
-        defaultStyle.push({ 'border-color': ColorPalette[color][60] });
+        defaultStyle.push({ borderColor: ColorPaletteMapper[color][60] });
     }
 
     if (variant === ButtonVariant.FILLED) {
-        defaultStyle.push({ 'background-color': ColorPalette[color][60] });
+        defaultStyle.push({ backgroundColor: ColorPaletteMapper[color][60] });
     }
-
-    console.log(defaultStyle);
 
     return defaultStyle;
 };

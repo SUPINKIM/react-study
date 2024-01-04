@@ -29,5 +29,8 @@ export const ColorPaletteMapper = {
         40: '#5BB318',
         60: '#2B7A0B'
     },
-    [ColorPalette.WHITE]: { 100: '#FFFFFF' }
+    [ColorPalette.WHITE]: {
+        60: '#FFFFFF',
+        100: '#FFFFFF'
+    }
 };

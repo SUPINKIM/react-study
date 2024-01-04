@@ -11,6 +11,7 @@
         "dev": "turbo run dev",
         "build": "turbo run build",
         "type-checking": "turbo run type-checking",
+        "ui:dev": "turbo run --filter=ui dev",
         "ui:storybook": "turbo run --filter=ui storybook"
     },
     "workspaces": [
