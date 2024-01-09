@@ -1,24 +1,23 @@
 import { ColorPalette } from '../color';
 
 export enum ButtonSize {
-    SMALL,
-    MEDIUM,
-    LARGE
+    SMALL = 'small',
+    MEDIUM = 'medium',
+    LARGE = 'large'
 }
 
 export enum ButtonVariant {
-    FILLED,
-    OUTLINED,
-    TEXT
+    FILLED = 'filled',
+    OUTLINED = 'outlined',
+    TEXT = 'text'
 }
 
 export enum ButtonShape {
-    RECTANGLE,
-    ROUND
+    RECTANGLE = 'rectangle',
+    ROUND = 'round'
 }
 
 export interface IButtonProps {
-    variant: ButtonVariant;
     color: ColorPalette;
     size: ButtonSize;
     shape: ButtonShape;

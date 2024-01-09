@@ -1,10 +1,6 @@
 import { css } from '@emotion/react';
 
-import {
-    ButtonVariant,
-    ButtonShape,
-    ButtonSize
-} from '@components/button/types';
+import { ButtonShape, ButtonSize } from '@components/button/types';
 
 import { ColorPalette } from '@components/color';
 import Button from '@components/button';
@@ -16,29 +12,29 @@ function App() {
                 css={css`
                     display: flex;
                     column-gap: 10px;
+                    padding-top: 12px;
+                    padding-left: 10px;
                 `}>
-                <Button
-                    variant={ButtonVariant.FILLED}
+                <Button.filled
                     color={ColorPalette.ORANGE}
                     size={ButtonSize.SMALL}
-                    shape={ButtonShape.ROUND}>
-                    button
-                </Button>
-                <Button
-                    variant={ButtonVariant.FILLED}
+                    shape={ButtonShape.RECTANGLE}>
+                    button1
+                </Button.filled>
+                <Button.outlined
                     color={ColorPalette.PINK}
                     size={ButtonSize.MEDIUM}
                     shape={ButtonShape.ROUND}>
-                    button
-                </Button>
-                <Button
-                    variant={ButtonVariant.FILLED}
+                    button2
+                </Button.outlined>
+                <Button.text
                     color={ColorPalette.BLUE}
                     size={ButtonSize.LARGE}
                     shape={ButtonShape.ROUND}>
-                    button
-                </Button>
+                    button3
+                </Button.text>
             </div>
+            {/* <Drawer /> */}
         </>
     );
 }
