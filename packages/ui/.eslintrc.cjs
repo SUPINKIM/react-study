@@ -1,8 +1,3 @@
 module.exports = {
-    extends: ['custom'],
-    settings: {
-        'import/resolver': {
-            typescript: {}
-        }
-    }
+    extends: ['custom', 'plugin:storybook/recommended']
 };

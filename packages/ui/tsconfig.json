@@ -5,16 +5,16 @@
         "baseUrl": ".",
         "paths": {
             "@/*": ["src/*"],
-            "@components/*": ["src/components/*"]
+            "@components/*": ["src/components/*"],
+            "@hooks/*": ["src/hooks/*"]
         },
         "esModuleInterop": true,
-        "jsx": "preserve",
+        "jsx": "react-jsx",
+        "jsxImportSource": "@emotion/react",
         "emitDeclarationOnly": true,
         "declaration": true,
         "noEmit": false,
         "outDir": "./@types"
-        // "allowImportingTsExtensions": false,
-        // "isolatedModules": true,
     },
     "include": ["src/**/*.tsx", "src/**/*.ts"],
     "exclude": ["node_modules", "./dist"]

@@ -5,8 +5,8 @@
             "path": "."
         },
         {
-            "name": "🚀 @my-blog/dinner-suggestion",
-            "path": "apps/dinner-suggestion"
+            "name": "🚀 @my-blog/trip-diary",
+            "path": "apps/trip-diary"
         },
         {
             "name": "📦 @my-blog/ui",

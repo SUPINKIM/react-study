@@ -16,6 +16,7 @@ export default defineConfig({
         tsconfigPaths(),
         dts()
     ],
+    server: { port: 8080 },
     build: {
         lib: {
             entry: resolve(__dirname, './src/main.tsx'),
@@ -28,6 +29,5 @@ export default defineConfig({
             ]
         },
         target: 'esnext'
-        // ollupOptions: { external: ['@emotions/styled'] }
     }
 });

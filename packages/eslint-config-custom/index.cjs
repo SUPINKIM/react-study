@@ -81,7 +81,8 @@ module.exports = {
             }
         ],
         'object-property-newline': 'error',
-        multiline: 'off'
+        multiline: 'off',
+        'quote-props': ['error', 'consistent-as-needed', { keywords: true }]
     },
     settings: {
         'import/resolver': {

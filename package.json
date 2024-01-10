@@ -11,10 +11,10 @@
         "dev": "turbo run dev",
         "build": "turbo run build",
         "type-checking": "turbo run type-checking",
-        "ui:dev": "turbo run dev --filter=ui",
-        "ui:build": "turbo run build --filter=ui",
-        "dinner:dev": "turbo run dev --filter=dinner-suggestion",
-        "dinner:build": "turbo run build --filter=dinner-suggestion"
+        "ui:dev": "turbo run --filter=ui dev",
+        "ui:storybook": "turbo run --filter=ui storybook",
+        "trip:dev": "turbo run --filter=trip-diary dev",
+        "trip:build": "turbo run --filter=trip-diary bulid"
     },
     "workspaces": [
         "apps/*",
