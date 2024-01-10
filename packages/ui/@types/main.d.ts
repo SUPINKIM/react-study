@@ -1,6 +1,10 @@
 import FloatingButtonSet from './components/floating';
 import Button from './components/button';
-import { ButtonShape, ButtonSize, ButtonVariant } from './components/button/types';
+import {
+    ButtonShape,
+    ButtonSize,
+    ButtonVariant
+} from './components/button/types';
 import { ColorPalette } from './components/color';
 declare const ButtonTypes: {
     ButtonShape: typeof ButtonShape;

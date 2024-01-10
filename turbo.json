@@ -18,6 +18,9 @@
         },
         "type-checking": {},
         "lint": {},
+        "dinner-suggestion#dev": {
+            "dependsOn": ["ui#build"]
+        },
         "dev": {
             "dependsOn": ["^build"],
             "cache": false,
