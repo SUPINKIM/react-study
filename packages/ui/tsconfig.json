@@ -1,5 +1,5 @@
 {
-    "extends": "tsconfig/base.json",
+    "extends": "@my-blog/tsconfig/base.json",
     // "files": ["./src/main.tsx"],
     "compilerOptions": {
         "baseUrl": ".",

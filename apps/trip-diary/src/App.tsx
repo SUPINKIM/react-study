@@ -1,11 +1,15 @@
-import FloatingButtonSet from 'ui';
+import { Button, ButtonTypes, ColorTypes } from '@my-blog/ui';
 
 function App() {
     return (
         <>
-            <div></div>
-            <h1>Vite + React</h1>
-            <FloatingButtonSet />
+            <Button.filled
+                color={ColorTypes.ORANGE}
+                size={ButtonTypes.ButtonSize.SMALL}
+                shape={ButtonTypes.ButtonShape.RECTANGLE}>
+                button1
+            </Button.filled>
+            <div>여행 다이어리</div>
         </>
     );
 }

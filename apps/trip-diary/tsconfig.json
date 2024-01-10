@@ -1,6 +1,7 @@
 {
-    "extends": "tsconfig/base.json",
+    "extends": "@my-blog/tsconfig/base.json",
     "compilerOptions": {
         "baseUrl": "."
-    }
+    },
+    "exclude": ["vite.config.ts"]
 }

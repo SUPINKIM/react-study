@@ -19,8 +19,17 @@
         "type-checking": {},
         "lint": {},
         "dev": {
+            "dependsOn": ["^build"],
             "cache": false,
             "persistent": true
+        },
+        "trip:dev": {
+            "dependsOn": ["^build"],
+            "cache": false,
+            "persistent": true
+        },
+        "trip:build": {
+            "dependsOn": ["^build"]
         }
     }
 }

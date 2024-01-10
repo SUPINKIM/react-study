@@ -1,3 +1,4 @@
 import { TPropsWithChildren } from '@/types';
-declare const Card: TPropsWithChildren;
+import { ICardProps } from './types';
+declare const Card: TPropsWithChildren<ICardProps>;
 export default Card;
