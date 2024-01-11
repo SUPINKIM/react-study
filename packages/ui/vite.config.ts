@@ -22,7 +22,15 @@ export default defineConfig({
             formats: ['es'],
             name: '@my-blog/ui'
         },
-        rollupOptions: {},
+        rollupOptions: {
+            external: [
+                'react',
+                'react-dom',
+                'react/jsx-runtime',
+                '@emotion/react',
+                '@emotion/styled'
+            ]
+        },
         target: 'esnext'
     }
 });

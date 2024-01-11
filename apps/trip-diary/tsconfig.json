@@ -1,7 +1,12 @@
 {
     "extends": "@my-blog/tsconfig/base.json",
     "compilerOptions": {
-        "baseUrl": "."
+        "baseUrl": ".",
+        "paths": {
+            "@/*": ["src/*"],
+            "@components/*": ["src/components/*"],
+            "@pages/*": ["src/pages/*"]
+        },
     },
     "exclude": ["vite.config.ts"]
 }

@@ -8,7 +8,13 @@ const reactChunks = ['react', 'react-dom'];
 
 // https://vitejs.dev/config/
 export default defineConfig({
-    plugins: [react()],
+    plugins: [
+        react({
+            jsxImportSource: '@emotion/react',
+            plugins: [['@swc/plugin-emotion', {}]]
+        }),
+        tsconfigPaths()
+    ],
     build: {
         rollupOptions: {
             output: {

@@ -10,18 +10,21 @@
         "preview": "vite preview"
     },
     "dependencies": {
+        "@my-blog/ui": "workspace:*",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
-        "@my-blog/ui": "workspace:*"
+        "@emotion/react": "^11.11.1"
     },
     "devDependencies": {
         "@my-blog/tsconfig": "workspace:*",
         "@my-blog/eslint-config-custom": "workspace:*",
+        "@types/node": "^20.6.5",
         "@types/react": "^18.2.15",
         "@types/react-dom": "^18.2.7",
         "@typescript-eslint/eslint-plugin": "^6.0.0",
         "@typescript-eslint/parser": "^6.0.0",
         "@vitejs/plugin-react-swc": "^3.3.2",
+        "@swc/plugin-emotion": "^2.5.76",
         "eslint": "^8.45.0",
         "eslint-plugin-react-hooks": "^4.6.0",
         "eslint-plugin-react-refresh": "^0.4.3",

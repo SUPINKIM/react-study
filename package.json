@@ -24,5 +24,6 @@
     "devDependencies": {
         "turbo": "^1.10.14",
         "prettier": "^3.0.3"
-    }
+    },
+    "packageManager": "pnpm@8.14.1"
 }
