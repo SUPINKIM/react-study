@@ -5,6 +5,8 @@ module.exports = {
         'eslint:recommended',
         'plugin:@typescript-eslint/recommended',
         'plugin:react-hooks/recommended',
+        'plugin:react/recommended',
+        'plugin:react/jsx-runtime',
         'prettier'
     ],
     globals: {
@@ -82,7 +84,10 @@ module.exports = {
         ],
         'object-property-newline': 'error',
         multiline: 'off',
-        'quote-props': ['error', 'consistent-as-needed', { keywords: true }]
+        'quote-props': ['error', 'consistent-as-needed', { keywords: true }],
+        'react/self-closing-comp': 'error',
+        'react/no-unknown-property': ['error', { ignore: ['css'] }],
+        'react/prop-types': 'off'
     },
     settings: {
         'import/resolver': {

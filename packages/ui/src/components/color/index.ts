@@ -14,7 +14,12 @@ export const ColorPaletteMapper: Record<
     ColorPalette,
     Record<number, string>
 > = {
-    [ColorPalette.PINK]: { 60: '#DA0C81' },
+    [ColorPalette.PINK]: {
+        40: '#FFD1DA',
+        60: '#FBA1B7',
+        80: '#DA0C81',
+        100: '#F11A7B'
+    },
     [ColorPalette.BALCK]: {
         60: '#222222',
         100: '#191919'

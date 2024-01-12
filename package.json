@@ -15,7 +15,8 @@
         "ui:build": "turbo run --filter=ui build",
         "ui:storybook": "turbo run --filter=ui storybook",
         "trip:dev": "turbo run --filter=trip-diary dev",
-        "trip:build": "turbo run --filter=trip-diary build"
+        "trip:build": "turbo run --filter=trip-diary build",
+        "lint": "turbo run lint"
     },
     "workspaces": [
         "apps/*",

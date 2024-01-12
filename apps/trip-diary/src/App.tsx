@@ -1,16 +1,11 @@
-import { Button, ButtonTypes, ColorTypes } from '@my-blog/ui';
+import { Outlet } from 'react-router-dom';
+import GlobalStyle from './global-style';
 
 function App() {
     return (
-        <>
-            <Button.filled
-                color={ColorTypes.ORANGE}
-                size={ButtonTypes.ButtonSize.SMALL}
-                shape={ButtonTypes.ButtonShape.RECTANGLE}>
-                button1
-            </Button.filled>
-            <div>여행 다이어리</div>
-        </>
+        <GlobalStyle>
+            <Outlet />
+        </GlobalStyle>
     );
 }
 

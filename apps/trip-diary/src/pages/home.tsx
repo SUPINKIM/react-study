@@ -1,5 +1,7 @@
+import InteractionHome from '@components/interaction';
+
 const Home = () => {
-    return <div></div>;
+    return <InteractionHome />;
 };
 
 export default Home;

@@ -5,8 +5,11 @@
         "paths": {
             "@/*": ["src/*"],
             "@components/*": ["src/components/*"],
-            "@pages/*": ["src/pages/*"]
+            "@pages/*": ["src/pages/*"],
+            "@router/*": ["src/router/*"],
+            "@layout/*": ["src/layout/*"]
         },
+        "moduleResolution": "Bundler"
     },
     "exclude": ["vite.config.ts"]
 }
