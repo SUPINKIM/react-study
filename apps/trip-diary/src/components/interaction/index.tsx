@@ -7,10 +7,8 @@ const InteractionHome = () => {
     canvas.setAttribute('width', '1600');
     canvas.setAttribute('height', '1200');
 
-    const showModal = (event: MouseEvent) => {
-        if (event.clientY > 200 && event.clientY < 380) {
-            alert('메뉴 보여주기');
-        }
+    const showModal = () => {
+        alert('메뉴 보여주기');
     };
 
     useEffect(() => {
@@ -20,10 +18,10 @@ const InteractionHome = () => {
         );
 
         document.getElementById('canvas-container')?.appendChild(canvas);
-        canvas.addEventListener('click', showModal);
+        canvas.addEventListener('dblclick', showModal);
 
         return () => {
-            canvas.removeEventListener('click', showModal);
+            canvas.removeEventListener('dblclick', showModal);
         };
     }, []);
 

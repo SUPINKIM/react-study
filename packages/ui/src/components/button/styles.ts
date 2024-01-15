@@ -7,7 +7,7 @@ const ButtonSizeMapper = {
     [ButtonSize.SMALL]: css({
         padding: '8px 6px',
         height: '24px',
-        width: '56px',
+        width: '60px',
         fontSize: '12px'
     }),
     [ButtonSize.MEDIUM]: css({
