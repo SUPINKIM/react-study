@@ -17,6 +17,7 @@ export default defineConfig({
     ],
     server: { port: 8080 },
     build: {
+        watch: { include: ['./src/**/*.ts', './src/**/*.tsx'] },
         lib: {
             entry: resolve(__dirname, './src/main.tsx'),
             formats: ['es'],

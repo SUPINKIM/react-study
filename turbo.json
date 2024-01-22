@@ -18,18 +18,15 @@
         },
         "type-checking": {},
         "lint": {},
-        "dinner-suggestion#dev": {
-            "dependsOn": ["ui#build"]
-        },
         "dev": {
             "dependsOn": ["^build"],
             "cache": false,
-            "persistent": true
+            "persistent": false
         },
         "trip:dev": {
             "dependsOn": ["^build"],
             "cache": false,
-            "persistent": true
+            "persistent": false
         },
         "trip:build": {
             "dependsOn": ["^build"]

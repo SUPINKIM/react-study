@@ -25,8 +25,10 @@ export const ModalContainer = styled.div`
     padding: 16px;
 `;
 
-// export const ModalCloseButton = styled(XButton)`
-//     color: ${ColorTypes.BALCK};
-//     width: 24px;
-//     height: 24px;
-// `;
+export const ModalHeader = styled.div`
+    width: 100%;
+    height: 36px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+`;
