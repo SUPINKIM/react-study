@@ -1,14 +1,14 @@
-import { useEffect } from 'react';
+import { FC, useEffect } from 'react';
 import { Application } from '@splinetool/runtime';
 import { css } from '@emotion/react';
 
-const InteractionHome = () => {
+const InteractionHome: FC<{ handler: () => void }> = ({ handler }) => {
     const canvas = document.createElement('canvas');
-    canvas.setAttribute('width', '1600');
-    canvas.setAttribute('height', '1200');
+    canvas.setAttribute('width', '1000');
+    canvas.setAttribute('height', '800');
 
     const showModal = () => {
-        alert('메뉴 보여주기');
+        handler();
     };
 
     useEffect(() => {

@@ -87,7 +87,8 @@ module.exports = {
         'quote-props': ['error', 'consistent-as-needed', { keywords: true }],
         'react/self-closing-comp': 'error',
         'react/no-unknown-property': ['error', { ignore: ['css'] }],
-        'react/prop-types': 'off'
+        'react/prop-types': 'off',
+        'quote-props': 'off'
     },
     settings: {
         'import/resolver': {

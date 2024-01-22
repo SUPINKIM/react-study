@@ -1,5 +1,7 @@
 import FloatingButtonSet from './components/floating';
 import Button from './components/button';
+import Modal from './components/modal';
+
 import {
     ButtonShape,
     ButtonSize,
@@ -16,4 +18,11 @@ const ButtonTypes = {
 
 const ColorTypes = ColorPalette;
 
-export { FloatingButtonSet, Button, ButtonTypes, ColorTypes };
+export {
+    //
+    FloatingButtonSet,
+    Button,
+    ButtonTypes,
+    ColorTypes,
+    Modal
+};

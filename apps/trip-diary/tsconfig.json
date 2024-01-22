@@ -7,9 +7,11 @@
             "@components/*": ["src/components/*"],
             "@pages/*": ["src/pages/*"],
             "@router/*": ["src/router/*"],
-            "@layout/*": ["src/layout/*"]
+            "@layout/*": ["src/layout/*"],
+            "@store/*": ["src/store/*"]
         },
-        "moduleResolution": "Bundler"
+        "moduleResolution": "Bundler",
+        "jsxImportSource": "@emotion/react"
     },
     "exclude": ["vite.config.ts"]
 }

@@ -1,27 +1,12 @@
-import { Link } from 'react-router-dom';
-
 import { css } from '@emotion/react';
 
 import { Button, ColorTypes, ButtonTypes } from '@my-blog/ui';
-import { HeaderContainer, AccountIcon } from './styles';
+import { HeaderContainer, AccountIcon, Logo } from './styles';
 
 const Header = () => {
     return (
         <HeaderContainer>
-            <Link
-                to='/'
-                css={css`
-                    all: unset;
-                    font-size: 24px;
-                    font-weight: 600;
-                    color: ${ColorTypes.GREEN};
-                    cursor: pointer;
-                    &:hover {
-                        color: ${ColorTypes.GRAY};
-                    }
-                `}>
-                Trip Diary
-            </Link>
+            <Logo to='/'>Trip Diary</Logo>
             <div
                 css={css`
                     display: flex;

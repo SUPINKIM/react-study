@@ -19,6 +19,14 @@ const GlobalStyle: FC<{ children: ReactNode }> = ({ children }) => {
                         height: '100vh',
                         minWidth: '320px'
                     },
+                    '#portal': {
+                        minWidth: '320px',
+                        wiwdth: '100vw',
+                        height: '100vh',
+                        position: 'absolute',
+                        left: '0',
+                        top: '0'
+                    },
                     '#root > div': {
                         width: '100%',
                         height: '100%',
