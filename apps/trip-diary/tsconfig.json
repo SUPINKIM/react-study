@@ -1,13 +1,17 @@
 {
-    "extends": "tsconfig/base.json",
+    "extends": "@my-blog/tsconfig/base.json",
     "compilerOptions": {
         "baseUrl": ".",
         "paths": {
-            "@/*": ["src/*"]
+            "@/*": ["src/*"],
+            "@components/*": ["src/components/*"],
+            "@pages/*": ["src/pages/*"],
+            "@router/*": ["src/router/*"],
+            "@layout/*": ["src/layout/*"],
+            "@store/*": ["src/store/*"]
         },
-        "moduleResolution": "Node",
-        "esModuleInterop": true
+        "moduleResolution": "Bundler",
+        "jsxImportSource": "@emotion/react"
     },
-    "include": ["src/**/*.tsx", "src/**/*.ts"],
-    "exclude": ["node_modules", "./dist"]
+    "exclude": ["vite.config.ts"]
 }

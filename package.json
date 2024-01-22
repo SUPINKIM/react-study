@@ -12,9 +12,11 @@
         "build": "turbo run build",
         "type-checking": "turbo run type-checking",
         "ui:dev": "turbo run --filter=ui dev",
+        "ui:build": "turbo run --filter=ui build",
         "ui:storybook": "turbo run --filter=ui storybook",
         "trip:dev": "turbo run --filter=trip-diary dev",
-        "trip:build": "turbo run --filter=trip-diary bulid"
+        "trip:build": "turbo run --filter=trip-diary build",
+        "lint": "turbo run lint"
     },
     "workspaces": [
         "apps/*",
@@ -23,5 +25,6 @@
     "devDependencies": {
         "turbo": "^1.10.14",
         "prettier": "^3.0.3"
-    }
+    },
+    "packageManager": "pnpm@8.14.1"
 }

@@ -1,3 +1,3 @@
 module.exports = {
-    extends: ['custom', 'plugin:storybook/recommended']
+    extends: ['@my-blog/eslint-config-custom', 'plugin:storybook/recommended']
 };
