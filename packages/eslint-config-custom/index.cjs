@@ -93,6 +93,9 @@ module.exports = {
     settings: {
         'import/resolver': {
             typescript: {}
+        },
+        react: {
+            version: 'detect'
         }
     }
 };
