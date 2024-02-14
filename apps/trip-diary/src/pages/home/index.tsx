@@ -25,7 +25,7 @@ const Home = () => {
                 👇 이미지를 더블클릭 해보세요!
             </div>
             <InteractionHome handler={() => toggleOpenState(!isOpen)} />
-            <Suspense fallback={Loading}>
+            <Suspense fallback={<Loading />}>
                 <Modal>
                     <ModalContentsComponent />
                 </Modal>
