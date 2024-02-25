@@ -1,8 +1,10 @@
 import { atom } from 'recoil';
+import { ModalComponentsName } from './types';
 
 export const ModalStateKey = {
     OPEN_STATE: 'OPEN',
-    PROPS: 'PROPS'
+    PROPS: 'PROPS',
+    COMPONENT: 'COMPONENT'
 };
 
 export const modalOpenState = atom<boolean>({
@@ -13,4 +15,9 @@ export const modalOpenState = atom<boolean>({
 export const modalPropsState = atom<Record<string, never>>({
     key: ModalStateKey.PROPS,
     default: {}
+});
+
+export const modalComponentState = atom<ModalComponentsName>({
+    key: ModalStateKey.COMPONENT,
+    default: ModalComponentsName.LOADING
 });
