@@ -9,10 +9,6 @@
             "path": "apps/trip-diary"
         },
         {
-            "name": "🚀 @my-blog/svelte-study",
-            "path": "apps/svelte-study"
-        },
-        {
             "name": "📦 @my-blog/ui",
             "path": "packages/ui"
         },
