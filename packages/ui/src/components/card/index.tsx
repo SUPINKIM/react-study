@@ -1,7 +1,11 @@
 import { TPropsWithChildren } from '@/types';
 import { ICardProps } from './types';
 
-const Card: TPropsWithChildren<ICardProps> = ({ imageUrl, title, explain }) => {
+const Card: TPropsWithChildren<ICardProps> = ({
+    imageUrl, //
+    title,
+    explain
+}) => {
     return (
         <div>
             {/*썸네일 자리 */}

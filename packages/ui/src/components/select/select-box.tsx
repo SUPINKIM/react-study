@@ -1,7 +1,7 @@
 import { FC } from 'react';
 
 const SelectBox: FC = () => {
-    return <div></div>;
+    return <div />;
 };
 
 export default SelectBox;
