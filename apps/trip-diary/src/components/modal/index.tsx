@@ -29,7 +29,6 @@ const Modal = () => {
 
     return (
         isOpen &&
-        component &&
         createPortal(
             <CommonModal closeHandler={closeModal}>
                 <ModalContents />
