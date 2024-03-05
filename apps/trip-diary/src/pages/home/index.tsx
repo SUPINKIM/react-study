@@ -1,11 +1,13 @@
-import { Suspense, useEffect } from 'react';
+import { Suspense } from 'react';
 import { css } from '@emotion/react';
 import { useRecoilState, useSetRecoilState } from 'recoil';
 
 import InteractionHome from '@components/interaction';
 import { modalComponentState, modalOpenState } from '@/store/modal';
 import Modal from '@/components/modal';
+
 import Loading from '@components/loading';
+
 import { ModalComponentsName } from '@/store/modal/types';
 import { bounce } from './styles';
 
@@ -13,9 +15,10 @@ const Home = () => {
     const [isOpen, toggleOpenState] = useRecoilState(modalOpenState);
     const setComponent = useSetRecoilState(modalComponentState);
 
-    useEffect(() => {
+    const dbClickInteractionHome = () => {
         setComponent(ModalComponentsName.LIST);
-    }, [setComponent]);
+        toggleOpenState(!isOpen);
+    };
 
     return (
         <div>
@@ -28,10 +31,12 @@ const Home = () => {
                 `}>
                 👇 이미지를 더블클릭 해보세요!
             </div>
-            <InteractionHome handler={() => toggleOpenState(!isOpen)} />
-            <Suspense fallback={<Loading />}>
-                <Modal />
-            </Suspense>
+            <InteractionHome handler={dbClickInteractionHome} />
+            {isOpen && (
+                <Suspense fallback={<Loading />}>
+                    <Modal />
+                </Suspense>
+            )}
         </div>
     );
 };
