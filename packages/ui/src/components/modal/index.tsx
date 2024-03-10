@@ -3,9 +3,9 @@ import { XCircle } from '@emotion-icons/bootstrap';
 import { css } from '@emotion/react';
 import { ColorPalette } from '../color';
 import { ModalBackground, ModalContainer, ModalHeader } from './styles';
-import { TModal } from './types';
+import { ModalProps } from './types';
 
-const Modal: TModal = ({ children, closeHandler }) => {
+const Modal = ({ children, closeHandler }: ModalProps) => {
     const stopPropagation = (event: MouseEvent<HTMLDivElement>) => {
         event.stopPropagation();
     };
