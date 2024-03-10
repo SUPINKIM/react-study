@@ -13,6 +13,8 @@
         "@emotion-icons/bootstrap": "^3.27.0",
         "@my-blog/ui": "workspace:*",
         "@splinetool/runtime": "^1.0.25",
+        "@tanstack/react-query": "^5.24.8",
+        "react-hook-form": "^7.51.0",
         "react-router-dom": "^6.21.2",
         "recoil": "^0.7.7"
     },

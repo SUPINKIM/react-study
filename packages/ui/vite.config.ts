@@ -27,6 +27,7 @@ export default defineConfig({
             external: [
                 'react',
                 'react-dom',
+                'react-hook-form',
                 '@emotion/react',
                 '@emotion/styled'
             ]
