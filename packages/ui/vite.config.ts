@@ -15,7 +15,10 @@ export default defineConfig({
         tsconfigPaths(),
         dts()
     ],
-    server: { port: 8080 },
+    server: {
+        port: 8080,
+        host: '0.0.0.0'
+    },
     build: {
         //watch: { include: ['./src/**/*.ts', './src/**/*.tsx'] },
         lib: {
