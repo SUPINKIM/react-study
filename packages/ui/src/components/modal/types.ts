@@ -1,8 +1,6 @@
-import { FC, ReactNode } from 'react';
+import { ReactNode } from 'react';
 
-export interface IModalProps {
+export interface ModalProps {
     children: ReactNode;
     closeHandler: () => void;
 }
-
-export type TModal = FC<IModalProps>;

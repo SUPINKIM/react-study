@@ -1,11 +1,11 @@
 import { SelectOptionItem } from '@components/select/styles';
 import { TPropsWithChildren } from '@/types';
 
-interface ISelectOptionProps {
+interface SelectOptionProps {
     onClick: () => void;
 }
 
-const SelectOption: TPropsWithChildren<ISelectOptionProps> = ({
+const SelectOption: TPropsWithChildren<SelectOptionProps> = ({
     onClick,
     children
 }) => {

@@ -4,6 +4,7 @@ import { ButtonShape, ButtonSize } from '@components/button/types';
 
 import { ColorPalette } from '@components/color';
 import Button from '@components/button';
+import { InputCore, InputLeftElement, InputGroup } from './components/input';
 
 function App() {
     return (
@@ -34,7 +35,19 @@ function App() {
                     button3
                 </Button.text>
             </div>
-            {/* <Drawer /> */}
+            <div
+                css={css`
+                    padding-left: 20px;
+                    margin-top: 20px;
+                `}>
+                <InputGroup>
+                    <InputCore
+                        value={123}
+                        onChange={() => {}}
+                    />
+                    <InputLeftElement>left</InputLeftElement>
+                </InputGroup>
+            </div>
         </>
     );
 }
