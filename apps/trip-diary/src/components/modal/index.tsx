@@ -1,19 +1,37 @@
-import { createPortal } from 'react-dom';
-import { ReactNode } from 'react';
-import { useRecoilState } from 'recoil';
+import React, { useMemo } from 'react';
+import { useRecoilState, useRecoilValue, useResetRecoilState } from 'recoil';
 import { Modal as CommonModal } from '@my-blog/ui';
-import { modalOpenState } from '@store/modal';
+import { modalOpenState, modalComponentState } from '@store/modal';
+import { ModalComponentsName } from '@/store/modal/types';
 
-const Modal = ({ children }: { children: ReactNode }) => {
+import Portal from '@/components/portal';
+
+const ModalComponents = {
+    //
+    [ModalComponentsName.LIST]: React.lazy(() => import('@components/list'))
+};
+
+const Modal = () => {
     const [isOpen, toggleOpen] = useRecoilState(modalOpenState);
+    const component = useRecoilValue(modalComponentState);
+    const resetComponent = useResetRecoilState(modalComponentState);
+
+    const ModalContents = useMemo(() => {
+        if (!component) throw Error();
+        return ModalComponents[component];
+    }, [component]);
+
+    const closeModal = () => {
+        toggleOpen(!isOpen);
+        resetComponent();
+    };
+
     return (
-        isOpen &&
-        createPortal(
-            <CommonModal closeHandler={() => toggleOpen(!isOpen)}>
-                {children}
-            </CommonModal>,
-            document.getElementById('portal')!
-        )
+        <Portal>
+            <CommonModal closeHandler={closeModal}>
+                <ModalContents />
+            </CommonModal>
+        </Portal>
     );
 };
 
