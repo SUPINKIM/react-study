@@ -13,6 +13,7 @@ export const ModalBackground = styled.div`
 `;
 
 export const ModalContainer = styled.div`
+    position: relative;
     background-color: ${ColorPaletteMapper[ColorPalette.WHITE][100]};
     width: 100%;
     height: 100%;
@@ -31,4 +32,15 @@ export const ModalHeader = styled.div`
     display: flex;
     justify-content: flex-end;
     align-items: center;
+`;
+
+export const ModalFooter = styled.div`
+    position: absolute;
+    bottom: 12px;
+    height: 60px;
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 12px;
 `;
