@@ -21,5 +21,6 @@ export interface IButtonProps {
     color: ColorPalette;
     size: ButtonSize;
     shape: ButtonShape;
+    width?: number;
     onClick?: () => void;
 }

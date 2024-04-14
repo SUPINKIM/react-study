@@ -7,19 +7,16 @@ const ButtonSizeMapper = {
     [ButtonSize.SMALL]: css({
         padding: '8px 6px',
         height: '24px',
-        width: '60px',
         fontSize: '12px'
     }),
     [ButtonSize.MEDIUM]: css({
         padding: '10px 12px',
         height: '32px',
-        width: '80px',
         fontSize: '14px'
     }),
     [ButtonSize.LARGE]: css({
         padding: '16px 12px',
-        height: '36px',
-        width: '160px',
+        height: '40px',
         fontSize: '16px'
     })
 };
@@ -46,7 +43,8 @@ export const FilledButton = styled.button<IButtonProps>(
         alignItems: 'center',
         color: ColorPaletteMapper[ColorPalette.WHITE][100],
         backgroundColor: ColorPaletteMapper[props.color][60],
-        cursor: 'pointer'
+        cursor: 'pointer',
+        width: props.width ? `${props.width}px` : '100px'
     }),
     props => ({ ...ButtonSizeMapper[props.size] }),
     props => ({ ...ButtonShapeMapper[props.shape] }),
@@ -67,7 +65,8 @@ export const OutlinedButton = styled.button<IButtonProps>(
         alignItems: 'center',
         cursor: 'pointer',
         backgroundColor: ColorPaletteMapper[ColorPalette.WHITE][100],
-        color: ColorPaletteMapper[props.color][60]
+        color: ColorPaletteMapper[props.color][60],
+        width: props.width ? `${props.width}px` : '100px'
     }),
     props => ({ ...ButtonSizeMapper[props.size] }),
     props => ({ ...ButtonShapeMapper[props.shape] }),
@@ -80,11 +79,12 @@ export const OutlinedButton = styled.button<IButtonProps>(
 );
 
 export const TextButton = styled.button<IButtonProps>(
-    {
+    props => ({
         all: 'unset',
         cursor: 'pointer',
-        fontWeight: 600
-    },
+        fontWeight: 600,
+        width: props.width ? `${props.width}px` : '100px'
+    }),
     props => ButtonSizeMapper[props.size],
     props => ({
         color: ColorPaletteMapper[props.color][60],
