@@ -88,7 +88,8 @@ module.exports = {
         'react/self-closing-comp': 'error',
         'react/no-unknown-property': ['error', { ignore: ['css'] }],
         'react/prop-types': 'off',
-        'quote-props': 'off'
+        'quote-props': 'off',
+        'react-refresh/only-export-components': 'off'
     },
     settings: {
         'import/resolver': {

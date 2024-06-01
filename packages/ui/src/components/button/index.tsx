@@ -1,9 +1,19 @@
-import { TReactElementsWithChildren } from '@/types';
-import { ButtonVariant, IButtonProps } from './types';
+import { PropsWithChildren } from 'react';
+import { ButtonVariant, ButtonProps } from './types';
 
 import { FilledButton, OutlinedButton, TextButton } from './styles';
 
-const Button: TReactElementsWithChildren<ButtonVariant, IButtonProps> = {
+type ButtonPropsType = {
+    [key in ButtonVariant.FILLED | ButtonVariant.OUTLINED]: (
+        props: PropsWithChildren<ButtonProps>
+    ) => JSX.Element;
+} & {
+    [key in ButtonVariant.TEXT]: (
+        props: PropsWithChildren<Omit<ButtonProps, 'shape'>>
+    ) => JSX.Element;
+};
+
+const Button: ButtonPropsType = {
     [ButtonVariant.FILLED]: ({ children, ...props }) => (
         <FilledButton {...props}>{children}</FilledButton>
     ),

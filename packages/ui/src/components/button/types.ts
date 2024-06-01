@@ -17,9 +17,11 @@ export enum ButtonShape {
     ROUND = 'round'
 }
 
-export interface IButtonProps {
+export interface ButtonProps {
     color: ColorPalette;
     size: ButtonSize;
     shape: ButtonShape;
+    width?: string;
+    height?: string;
     onClick?: () => void;
 }

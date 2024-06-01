@@ -1,26 +1,20 @@
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 import { ColorPalette, ColorPaletteMapper } from '../color';
-import { ButtonShape, ButtonSize, IButtonProps } from './types';
+import { ButtonShape, ButtonSize, ButtonProps } from './types';
 
 const ButtonSizeMapper = {
     [ButtonSize.SMALL]: css({
         padding: '8px 6px',
-        height: '24px',
-        width: '60px',
-        fontSize: '12px'
+        fontSize: '14px'
     }),
     [ButtonSize.MEDIUM]: css({
         padding: '10px 12px',
-        height: '32px',
-        width: '80px',
-        fontSize: '14px'
+        fontSize: '16px'
     }),
     [ButtonSize.LARGE]: css({
         padding: '16px 12px',
-        height: '36px',
-        width: '160px',
-        fontSize: '16px'
+        fontSize: '18px'
     })
 };
 
@@ -37,7 +31,7 @@ const ButtonShapeMapper = {
     })
 };
 
-export const FilledButton = styled.button<IButtonProps>(
+export const FilledButton = styled.button<ButtonProps>(
     props => ({
         all: 'unset',
         fontWeight: 600,
@@ -46,7 +40,9 @@ export const FilledButton = styled.button<IButtonProps>(
         alignItems: 'center',
         color: ColorPaletteMapper[ColorPalette.WHITE][100],
         backgroundColor: ColorPaletteMapper[props.color][60],
-        cursor: 'pointer'
+        cursor: 'pointer',
+        width: props.width || '200px',
+        height: props.height || '46px'
     }),
     props => ({ ...ButtonSizeMapper[props.size] }),
     props => ({ ...ButtonShapeMapper[props.shape] }),
@@ -58,7 +54,7 @@ export const FilledButton = styled.button<IButtonProps>(
     })
 );
 
-export const OutlinedButton = styled.button<IButtonProps>(
+export const OutlinedButton = styled.button<ButtonProps>(
     props => ({
         all: 'unset',
         fontWeight: 600,
@@ -67,7 +63,9 @@ export const OutlinedButton = styled.button<IButtonProps>(
         alignItems: 'center',
         cursor: 'pointer',
         backgroundColor: ColorPaletteMapper[ColorPalette.WHITE][100],
-        color: ColorPaletteMapper[props.color][60]
+        color: ColorPaletteMapper[props.color][60],
+        width: props.width || '200px',
+        height: props.height || '46px'
     }),
     props => ({ ...ButtonSizeMapper[props.size] }),
     props => ({ ...ButtonShapeMapper[props.shape] }),
@@ -79,18 +77,13 @@ export const OutlinedButton = styled.button<IButtonProps>(
     }
 );
 
-export const TextButton = styled.button<IButtonProps>(
+export const TextButton = styled.button<Omit<ButtonProps, 'shape'>>(
     {
         all: 'unset',
         cursor: 'pointer',
         fontWeight: 600
     },
     props => ButtonSizeMapper[props.size],
-    props => ({
-        color: ColorPaletteMapper[props.color][60],
-        padding: 0,
-        width: 0
-        // height: 0
-    }),
+    props => ({ color: ColorPaletteMapper[props.color][60] }),
     { '&:hover': css({ textDecoration: 'underline' }) }
 );
