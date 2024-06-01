@@ -22,6 +22,6 @@
         }
     ],
     "settings": {
-        "typescript.tsdk": "node_modules/typescript/lib"
+        "typescript.tsdk": "🚀 @my-blog/trip-diary/node_modules/typescript/lib"
     }
 }

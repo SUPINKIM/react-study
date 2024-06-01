@@ -18,6 +18,8 @@ const ButtonTypes = {
 
 const ColorTypes = ColorPalette;
 
+export * from './components/card';
+
 export {
     //
     FloatingButtonSet,

@@ -23,8 +23,12 @@
         "packages/*"
     ],
     "devDependencies": {
+        "prettier": "^3.0.3",
         "turbo": "^1.10.14",
-        "prettier": "^3.0.3"
+        "typescript": "^5.4.5"
     },
-    "packageManager": "pnpm@8.14.1"
+    "packageManager": "pnpm@8.14.1",
+    "resolutions": {
+        "typescript": "^5.4.5"
+    }
 }
